@@ -401,7 +401,7 @@
 
                     /*#region responsive code begin*/
 
-                    var MAX_WIDTH = 980;
+                    var MAX_WIDTH = 1080;
 
                     function ScaleSlider() {
                         var containerElement = jssor_1_slider.$Elmt.parentNode;
@@ -412,6 +412,7 @@
                             var expectedWidth = Math.min(MAX_WIDTH || containerWidth, containerWidth);
 
                             jssor_1_slider.$ScaleWidth(expectedWidth);
+                            jssor_1_slider.$ScaleHeight(expectedWidth * 9 / 16);
                         } else {
                             window.setTimeout(ScaleSlider, 30);
                         }
@@ -430,7 +431,7 @@
                 
                 .jssorl-009-spin img {
                     animation-name: jssorl-009-spin;
-                    animation-duration: 1.6s;
+                    animation-duration: 3s;
                     animation-iteration-count: infinite;
                     animation-timing-function: linear;
                 }
@@ -576,11 +577,6 @@
                         <img data-u="image" src="img/0.jpg" />
                         <img data-u="thumb" src="img/0_rjpg" />
                     </div>
-                    <div>
-                        <img data-u="image" src="img/0.jpg" />
-                        <img data-u="thumb" src="img/0_r.jpg" />
-                    </div>
-
                     <div>
                         <img data-u="image" src="img/1.jpg" />
                         <img data-u="thumb" src="img/1_r.jpg" />

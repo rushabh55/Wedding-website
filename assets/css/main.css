@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 @import url(font-awesome.min.css);
 @import url("https://fonts.googleapis.com/css?family=Lobster|Open+Sans:300,400,600,700,800");
 
@@ -252,7 +252,7 @@ body {
 @media screen and (max-width: 736px) {
     .container.\31 25\25 {
         width: 100%;
-        max-width: 112.5%;
+        max-width: 102.5%;
         min-width: 90%;
     }
     .container.\37 5\25 {
@@ -1482,10 +1482,10 @@ body {
     -ms-overflow-style: scrollbar;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: device-width) {
     html,
     body {
-        min-width: 320px;
+        min-width: 380px;
     }
 }
 
@@ -1540,6 +1540,8 @@ body,
 input,
 select,
 textarea {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     font-family: 'Bad Script', cursive;
     font-size: 13pt;
     font-weight: 300;
@@ -1632,18 +1634,22 @@ h4 a,
 h5 a,
 h6 a {
     color: inherit;
-    text-decoration: none;
+    text-decoration: solid;
 }
 
 h2 {
     font-size: 1.75em;
 }
 
-h2.detailsTitle {
-    font-family: 'Bad Script', cursive;
-}
+    h2.detailsTitle {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Bad Script', cursive;
+    }
 
 h3.details {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     font-family: 'Bad Script', cursive;
     text-transform: unset;
     font-size: 1.25em;
@@ -1652,7 +1658,7 @@ h3.details {
 h2.date {
     font-family: 'Cedarville Cursive', cursive;
     text-transform: unset;
-    font-size: 1.25em;
+    font-size: 1.20em;
 }
 
 p.venueDescription {
@@ -1660,13 +1666,18 @@ p.venueDescription {
 }
 
 a.details {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     font-family: 'Bad Script', cursive;
 }
 
 p.date {
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
     font-family: 'Cedarville Cursive', cursive;
     text-transform: unset;
     font-size: 1.25em;
+    font-variant-caps:all-petite-caps;
 }
 
 h3 {
@@ -3303,7 +3314,8 @@ body.subpage {
     top: 1em;
     width: 100%;
     z-index: 10001;
-    padding: 0 1.5em;
+    padding: 0 0;
+    top: -4px;
 }
 
 #header.alt {
@@ -3319,7 +3331,6 @@ body.subpage {
     margin: 0;
     padding: 0;
     position: absolute;
-    top: 0;
 }
 
 #header .logo a {
@@ -3583,14 +3594,16 @@ body.subpage {
     z-index: 2;
 }
 
-#banner h1 {
-    font-size: 7em;
-    line-height: 1.1;
-    font-family: 'Bad Script', cursive;
-    color: rgba(255, 255, 255, 0.9);
-    text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.5125);
-    text-transform: none;
-}
+    #banner h1 {
+        font-size: 7em;
+        line-height: 1.1;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+        font-family: 'Bad Script', cursive;
+        color: rgba(255, 255, 255, 0.9);
+        text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.5125);
+        text-transform: none;
+    }
 
 #banner p {
     color: rgba(255, 255, 255, 0.85);

@@ -24,6 +24,7 @@
     <!-- Header -->
     <header id="header">
         <div class="logo"><a href="index.html">Aditi and Rushabh's Reception</a></div>
+        <a href="#menu"><span>Menu</span></a>
     </header>
 
     <section id="banner" class="bg-img" data-bg="banner-s.jpg">
@@ -38,7 +39,7 @@
     <nav id="menu">
         <ul class="links">
             <li><a href="index.html">Home</a></li>
-            <li><a href="generic.html">Reception Venue</a></li>
+            <li><a href="receptionInfo.html">Reception Venue</a></li>
             <li><a href="https://forms.gle/StE9W5hivoGVo7Ur9">RSVP</a></li>
         </ul>
     </nav>
@@ -420,7 +421,12 @@
 
                     /*#region responsive code begin*/
 
-                    var MAX_WIDTH = 1080;
+                    var MAX_WIDTH = (window.innerWidth > 0) ? window.innerWidth : (screen.width - 100);
+                    var oneElem = document.getElementById("one");
+                    var reqdMax = oneElem.offsetWidth != undefined ? oneElem.offsetWidth : 980;
+                    reqdMax = reqdMax > 980 ? 980 : reqdMax;
+                    reqdMax -= 100;
+                    MAX_WIDTH = MAX_WIDTH > reqdMax ? reqdMax : MAX_WIDTH;
 
                     function ScaleSlider() {
                         var containerElement = jssor_1_slider.$Elmt.parentNode;
@@ -444,6 +450,9 @@
                     $Jssor$.$AddEvent(window, "orientationchange", ScaleSlider);
                     /*#endregion responsive code end*/
                 };
+
+                ScaleSlider();
+
             </script>
             <style>
                 /*jssor slider loading skin spin css*/
@@ -582,9 +591,9 @@
                     opacity: 1;
                 }
             </style>
-            <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px;width:980px;height:480px;overflow:hidden;visibility:hidden;">
+            <div id="jssor_1" style="position:relative;margin:0 auto;width:980px;height:480px;overflow:hidden;visibility:hidden;">
                 <!-- Loading Screen -->
-                <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:980px;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
                     <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="images/spin.svg" />
                 </div>
                 <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:980px;height:380px;overflow:hidden;">
@@ -682,38 +691,6 @@
                         <img data-u="image" src="img/b5.jpg" />
                         <img data-u="thumb" src="img/b5_t.jpg" />
                     </div>
-                    <!-- <div>
-        <img data-u="image" src="img/033.jpg" />
-        <img data-u="thumb" src="img/033-s190x90.jpg" />
-    </div>
-    <div>
-        <img data-u="image" src="img/034.jpg" />
-        <img data-u="thumb" src="img/034-s190x90.jpg" />
-    </div>
-    <div>
-        <img data-u="image" src="img/035.jpg" />
-        <img data-u="thumb" src="img/035-s190x90.jpg" />
-    </div>
-    <div>
-        <img data-u="image" src="img/036.jpg" />
-        <img data-u="thumb" src="img/036-s190x90.jpg" />
-    </div>
-    <div>
-        <img data-u="image" src="img/037.jpg" />
-        <img data-u="thumb" src="img/037-s190x90.jpg" />
-    </div>
-    <div>
-        <img data-u="image" src="img/038.jpg" />
-        <img data-u="thumb" src="img/038-s190x90.jpg" />
-    </div>
-    <div>
-        <img data-u="image" src="img/039.jpg" />
-        <img data-u="thumb" src="img/039-s190x90.jpg" />
-    </div>
-    <div>
-        <img data-u="image" src="img/040.jpg" />
-        <img data-u="thumb" src="img/040-s190x90.jpg" />
-    </div> -->
                 </div>
                 <!-- Thumbnail Navigator -->
                 <div data-u="thumbnavigator" class="jssort101" style="position:absolute;left:0px;bottom:0px;width:980px;height:100px;background-color:#000;" data-autocenter="1" data-scale-bottom="0.75">
